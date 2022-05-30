@@ -9,13 +9,28 @@
 /* Begin PBXBuildFile section */
 		C433E35E283CCBEA00441701 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433E35D283CCBEA00441701 /* AppDelegate.swift */; };
 		C433E360283CCBEA00441701 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433E35F283CCBEA00441701 /* SceneDelegate.swift */; };
-		C433E362283CCBEA00441701 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433E361283CCBEA00441701 /* ViewController.swift */; };
-		C433E365283CCBEA00441701 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C433E363283CCBEA00441701 /* Main.storyboard */; };
 		C433E367283CCBEB00441701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C433E366283CCBEB00441701 /* Assets.xcassets */; };
 		C433E36A283CCBEB00441701 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C433E368283CCBEB00441701 /* LaunchScreen.storyboard */; };
 		C433E375283CCBEC00441701 /* MapBoxDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433E374283CCBEC00441701 /* MapBoxDemoTests.swift */; };
 		C433E37F283CCBEC00441701 /* MapBoxDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433E37E283CCBEC00441701 /* MapBoxDemoUITests.swift */; };
 		C433E381283CCBEC00441701 /* MapBoxDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433E380283CCBEC00441701 /* MapBoxDemoUITestsLaunchTests.swift */; };
+		C433E38F283CCD6100441701 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = C433E38E283CCD6100441701 /* MapboxMaps */; };
+		C433E398283CCEA100441701 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433E396283CCEA100441701 /* AnnotationView.swift */; };
+		C433E399283CCEA100441701 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433E396283CCEA100441701 /* AnnotationView.swift */; };
+		C433E39A283CCEA100441701 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433E396283CCEA100441701 /* AnnotationView.swift */; };
+		C433E39B283CCEA100441701 /* AnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C433E397283CCEA100441701 /* AnnotationView.xib */; };
+		C433E39C283CCEA100441701 /* AnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C433E397283CCEA100441701 /* AnnotationView.xib */; };
+		C433E39D283CCEA100441701 /* AnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C433E397283CCEA100441701 /* AnnotationView.xib */; };
+		C433E39F283CCEA800441701 /* MapBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433E39E283CCEA800441701 /* MapBoxViewController.swift */; };
+		C433E3A0283CCEA800441701 /* MapBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433E39E283CCEA800441701 /* MapBoxViewController.swift */; };
+		C433E3A1283CCEA800441701 /* MapBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433E39E283CCEA800441701 /* MapBoxViewController.swift */; };
+		C433E3A4283CCEE100441701 /* MapBoxXibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433E3A2283CCEE100441701 /* MapBoxXibViewController.swift */; };
+		C433E3A5283CCEE100441701 /* MapBoxXibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433E3A2283CCEE100441701 /* MapBoxXibViewController.swift */; };
+		C433E3A6283CCEE100441701 /* MapBoxXibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433E3A2283CCEE100441701 /* MapBoxXibViewController.swift */; };
+		C433E3A7283CCEE100441701 /* MapBoxXibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C433E3A3283CCEE100441701 /* MapBoxXibViewController.xib */; };
+		C433E3A8283CCEE100441701 /* MapBoxXibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C433E3A3283CCEE100441701 /* MapBoxXibViewController.xib */; };
+		C433E3A9283CCEE100441701 /* MapBoxXibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C433E3A3283CCEE100441701 /* MapBoxXibViewController.xib */; };
+		C433E3AC283CD04000441701 /* MapboxNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = C433E3AB283CD04000441701 /* MapboxNavigation */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +54,6 @@
 		C433E35A283CCBEA00441701 /* MapBoxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapBoxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C433E35D283CCBEA00441701 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C433E35F283CCBEA00441701 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C433E361283CCBEA00441701 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C433E364283CCBEA00441701 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C433E366283CCBEB00441701 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C433E369283CCBEB00441701 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C433E36B283CCBEB00441701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +62,11 @@
 		C433E37A283CCBEC00441701 /* MapBoxDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapBoxDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C433E37E283CCBEC00441701 /* MapBoxDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBoxDemoUITests.swift; sourceTree = "<group>"; };
 		C433E380283CCBEC00441701 /* MapBoxDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBoxDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C433E396283CCEA100441701 /* AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
+		C433E397283CCEA100441701 /* AnnotationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnnotationView.xib; sourceTree = "<group>"; };
+		C433E39E283CCEA800441701 /* MapBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapBoxViewController.swift; path = MapBoxDemo/UI/MapBox/MapBoxViewController.swift; sourceTree = SOURCE_ROOT; };
+		C433E3A2283CCEE100441701 /* MapBoxXibViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapBoxXibViewController.swift; sourceTree = "<group>"; };
+		C433E3A3283CCEE100441701 /* MapBoxXibViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapBoxXibViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C433E38F283CCD6100441701 /* MapboxMaps in Frameworks */,
+				C433E3AC283CD04000441701 /* MapboxNavigation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,10 +119,9 @@
 		C433E35C283CCBEA00441701 /* MapBoxDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C433E392283CCE0F00441701 /* UI */,
 				C433E35D283CCBEA00441701 /* AppDelegate.swift */,
 				C433E35F283CCBEA00441701 /* SceneDelegate.swift */,
-				C433E361283CCBEA00441701 /* ViewController.swift */,
-				C433E363283CCBEA00441701 /* Main.storyboard */,
 				C433E366283CCBEB00441701 /* Assets.xcassets */,
 				C433E368283CCBEB00441701 /* LaunchScreen.storyboard */,
 				C433E36B283CCBEB00441701 /* Info.plist */,
@@ -127,6 +146,42 @@
 			path = MapBoxDemoUITests;
 			sourceTree = "<group>";
 		};
+		C433E392283CCE0F00441701 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C433E395283CCE6300441701 /* MapBox */,
+				C433E394283CCE5000441701 /* MapBoxXib */,
+				C433E393283CCE4100441701 /* Annotation */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C433E393283CCE4100441701 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				C433E396283CCEA100441701 /* AnnotationView.swift */,
+				C433E397283CCEA100441701 /* AnnotationView.xib */,
+			);
+			path = Annotation;
+			sourceTree = "<group>";
+		};
+		C433E394283CCE5000441701 /* MapBoxXib */ = {
+			isa = PBXGroup;
+			children = (
+				C433E3A2283CCEE100441701 /* MapBoxXibViewController.swift */,
+				C433E3A3283CCEE100441701 /* MapBoxXibViewController.xib */,
+			);
+			path = MapBoxXib;
+			sourceTree = "<group>";
+		};
+		C433E395283CCE6300441701 /* MapBox */ = {
+			isa = PBXGroup;
+			children = (
+				C433E39E283CCEA800441701 /* MapBoxViewController.swift */,
+			);
+			path = MapBox;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +198,10 @@
 			dependencies = (
 			);
 			name = MapBoxDemo;
+			packageProductDependencies = (
+				C433E38E283CCD6100441701 /* MapboxMaps */,
+				C433E3AB283CD04000441701 /* MapboxNavigation */,
+			);
 			productName = MapBoxDemo;
 			productReference = C433E35A283CCBEA00441701 /* MapBoxDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +274,10 @@
 				Base,
 			);
 			mainGroup = C433E351283CCBEA00441701;
+			packageReferences = (
+				C433E38D283CCD6100441701 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
+				C433E3AA283CD04000441701 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */,
+			);
 			productRefGroup = C433E35B283CCBEA00441701 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,8 +295,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C433E36A283CCBEB00441701 /* LaunchScreen.storyboard in Resources */,
+				C433E3A7283CCEE100441701 /* MapBoxXibViewController.xib in Resources */,
+				C433E39B283CCEA100441701 /* AnnotationView.xib in Resources */,
 				C433E367283CCBEB00441701 /* Assets.xcassets in Resources */,
-				C433E365283CCBEA00441701 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +305,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C433E39C283CCEA100441701 /* AnnotationView.xib in Resources */,
+				C433E3A8283CCEE100441701 /* MapBoxXibViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +314,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C433E39D283CCEA100441701 /* AnnotationView.xib in Resources */,
+				C433E3A9283CCEE100441701 /* MapBoxXibViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +326,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C433E362283CCBEA00441701 /* ViewController.swift in Sources */,
 				C433E35E283CCBEA00441701 /* AppDelegate.swift in Sources */,
+				C433E398283CCEA100441701 /* AnnotationView.swift in Sources */,
 				C433E360283CCBEA00441701 /* SceneDelegate.swift in Sources */,
+				C433E3A4283CCEE100441701 /* MapBoxXibViewController.swift in Sources */,
+				C433E39F283CCEA800441701 /* MapBoxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +339,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C433E375283CCBEC00441701 /* MapBoxDemoTests.swift in Sources */,
+				C433E3A5283CCEE100441701 /* MapBoxXibViewController.swift in Sources */,
+				C433E3A0283CCEA800441701 /* MapBoxViewController.swift in Sources */,
+				C433E399283CCEA100441701 /* AnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +350,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C433E381283CCBEC00441701 /* MapBoxDemoUITestsLaunchTests.swift in Sources */,
+				C433E39A283CCEA100441701 /* AnnotationView.swift in Sources */,
 				C433E37F283CCBEC00441701 /* MapBoxDemoUITests.swift in Sources */,
+				C433E3A6283CCEE100441701 /* MapBoxXibViewController.swift in Sources */,
+				C433E3A1283CCEA800441701 /* MapBoxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +373,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C433E363283CCBEA00441701 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C433E364283CCBEA00441701 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C433E368283CCBEB00441701 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -604,6 +672,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C433E38D283CCD6100441701 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.5.0;
+			};
+		};
+		C433E3AA283CD04000441701 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-navigation-ios.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C433E38E283CCD6100441701 /* MapboxMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C433E38D283CCD6100441701 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
+			productName = MapboxMaps;
+		};
+		C433E3AB283CD04000441701 /* MapboxNavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C433E3AA283CD04000441701 /* XCRemoteSwiftPackageReference "mapbox-navigation-ios" */;
+			productName = MapboxNavigation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C433E352283CCBEA00441701 /* Project object */;
 }

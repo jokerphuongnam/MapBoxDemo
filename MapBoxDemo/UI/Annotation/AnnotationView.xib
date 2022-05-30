@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnnotationView" customModule="MapBoxDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="NAN-7J-1z9" id="v1K-d6-PrJ"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="8BV-4T-DmQ"/>
+                <outlet property="title" destination="rED-Fl-iWI" id="oJ3-Hn-C1K"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="151"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rED-Fl-iWI" userLabel="Title">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="100.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAN-7J-1z9">
+                    <rect key="frame" x="0.0" y="100.5" width="414" height="50.5"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                    <connections>
+                        <action selector="buttonTap:forEvent:" destination="-1" eventType="touchUpInside" id="uP3-Wk-hTP"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="NAN-7J-1z9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="29x-ot-zCb"/>
+                <constraint firstItem="rED-Fl-iWI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4Ul-0t-L5t"/>
+                <constraint firstItem="NAN-7J-1z9" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="5qm-FK-RIK"/>
+                <constraint firstItem="rED-Fl-iWI" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="8aG-el-s35"/>
+                <constraint firstItem="NAN-7J-1z9" firstAttribute="top" secondItem="rED-Fl-iWI" secondAttribute="bottom" id="FIL-uN-gqN"/>
+                <constraint firstItem="rED-Fl-iWI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="es6-1N-vPP"/>
+                <constraint firstAttribute="bottom" secondItem="NAN-7J-1z9" secondAttribute="bottom" id="fgI-18-S78"/>
+                <constraint firstItem="rED-Fl-iWI" firstAttribute="height" secondItem="NAN-7J-1z9" secondAttribute="height" multiplier="2" id="gcA-Io-hYW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="322.43303571428572"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

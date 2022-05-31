@@ -39,15 +39,13 @@ final class MapBoxViewController: UIViewController {
         navigationMapView.delegate = self
         let mapLongGesture = UILongPressGestureRecognizer()
         mapLongGesture.addTarget(self, action: #selector(mapLongPress))
-//        mapView.addGestureRecognizer(mapLongGesture)
-        let mapPanGesture = UIPanGestureRecognizer()
-        mapPanGesture.addTarget(self, action:  #selector(mapPan))
-        navigationMapView.gestureRecognizers = [
-            mapLongGesture
-        ]
-//        navigationMapView.mapView.gestureRecognizers = [
-//            mapPanGesture
-//        ]
+        
+        navigationMapView.mapView.gestures.delegate = self
+        
+        navigationMapView.mapView.addGestureRecognizer(mapLongGesture)
+//        navigationMapView.mapView.addGestureRecognizer(mapPanGesture)
+//        navigationMapView.ges
+        
         return navigationMapView
     }()
     private var markerId = 0
@@ -135,21 +133,31 @@ private extension MapBoxViewController {
         let point = Point(navigationMapView.mapView.mapboxMap.coordinate(for: sender.location(in: navigationMapView)))
         addMaker(at: point)
     }
-    
-    @objc func mapPan(_ sender: UIPanGestureRecognizer) {
-        let point = Point(navigationMapView.mapView.mapboxMap.coordinate(for: sender.location(in: navigationMapView)))
-        guard sender.state == .ended else {
-            let coordinate = point.coordinates
-            navigationMapView.mapView.mapboxMap.setCamera(to: .init(center: .init(latitude: coordinate.latitude, longitude: coordinate.longitude)))
-            return
-        }
-//        addMaker(at: point)
-        print("\(point)")
-    }
 }
 
 extension MapBoxViewController: NavigationMapViewDelegate {
     
+}
+
+extension MapBoxViewController: GestureManagerDelegate {
+    func gestureManager(_ gestureManager: GestureManager, didBegin gestureType: GestureType) {
+        
+    }
+    
+    func gestureManager(_ gestureManager: GestureManager, didEndAnimatingFor gestureType: GestureType) {
+        
+    }
+    
+    func gestureManager(_ gestureManager: GestureManager, didEnd gestureType: GestureType, willAnimate: Bool) {
+        if gestureType == .pan {
+            let sender = gestureManager.panGestureRecognizer
+            if let center = sender.view?.center {
+                let point = Point(navigationMapView.mapView.mapboxMap.coordinate(for: center))
+                
+                addMaker(at: point)
+            }
+        }
+    }
 }
 
 extension MapBoxViewController: AnnotationInteractionDelegate {

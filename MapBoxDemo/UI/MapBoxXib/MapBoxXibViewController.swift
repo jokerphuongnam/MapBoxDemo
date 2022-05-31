@@ -122,10 +122,10 @@ class MapBoxXibViewController: UIViewController {
                 print(error.localizedDescription)
             case .success(let response):
                 self?.navigationMapView.removeRoutes()
-                if let routes = response.routes,
-                   let currentRoute = routes.first {
-                    self?.navigationMapView.show(routes)
-                    self?.navigationMapView.showWaypoints(on: currentRoute)
+                if let routes = response.routes {
+//                    self?.navigationMapView.show(routes)
+//                    self?.navigationMapView.showWaypoints(on: currentRoute)
+                    self?.navigationMapView.showcase(routes, animated: true)
                     guard let sw = waypoints.max(by: {
                         (lhs, rhs) in
                         (lhs.coordinate.latitude, lhs.coordinate.longitude) < (rhs.coordinate.latitude, rhs.coordinate.longitude)

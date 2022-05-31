@@ -83,7 +83,7 @@ class MapBoxXibViewController: UIViewController {
             geometry: Point(coordinate),
             width: 150,
             height: 125,
-//            associatedFeatureId: markerId,
+            //            associatedFeatureId: markerId,
             allowOverlap: true,
             anchor: .bottom
         )
@@ -116,8 +116,6 @@ class MapBoxXibViewController: UIViewController {
         }
         guard !waypoints.isEmpty else { return }
         let navigationRouteOptions = NavigationRouteOptions(waypoints: waypoints)
-        var southwest: CLLocationCoordinate2D? = nil
-        var northeast: CLLocationCoordinate2D? = nil
         Directions.shared.calculate(navigationRouteOptions) { [weak self] session, result in
             switch result {
             case .failure(let error):
@@ -128,33 +126,23 @@ class MapBoxXibViewController: UIViewController {
                    let currentRoute = routes.first {
                     self?.navigationMapView.show(routes)
                     self?.navigationMapView.showWaypoints(on: currentRoute)
-                    response.routes?.last?.legSeparators.forEach { waypoint in
-                        guard let coordinate = waypoint?.coordinate else { return }
-                        
-                        if let sw = southwest {
-                            if sw > coordinate {
-                                southwest = coordinate
-                            }
-                        } else {
-                            southwest = coordinate
-                        }
-                        if let ne = northeast {
-                            if ne < coordinate {
-                                northeast = coordinate
-                            }
-                        } else {
-                            northeast = coordinate
-                        }
-                    }
-                    guard let sw = southwest,
-                          let ne = northeast,
+                    guard let sw = waypoints.max(by: {
+                        (lhs, rhs) in
+                        (lhs.coordinate.latitude, lhs.coordinate.longitude) < (rhs.coordinate.latitude, rhs.coordinate.longitude)
+                    })?.coordinate,
+                          let ne = waypoints.min(by: {
+                              (lhs, rhs) in
+                              (lhs.coordinate.latitude, lhs.coordinate.longitude) < (rhs.coordinate.latitude, rhs.coordinate.longitude)
+                          })?.coordinate,
                           var camera = self?.navigationMapView.mapView.mapboxMap.camera(
-                                  for: CoordinateBounds(
-                                  southwest: sw,
-                                  northeast: ne
-                              ), padding: .zero, bearing: 0, pitch: 0) else {
-                              return
-                          }
+                            for: CoordinateBounds(
+                                southwest: sw,
+                                northeast: ne
+                            ), padding: .zero, bearing: 0, pitch: 0) else {
+                                return
+                            }
+                    
+//                    self?.navigationMapView.mapView.camera.ease(to: camera, duration: 0.5)
                     camera.zoom = (camera.zoom ?? 0.0) - 0.3
                     
                     self?.navigationMapView.mapView.mapboxMap.setCamera(to: camera)
@@ -189,23 +177,5 @@ extension MapBoxXibViewController: AnnotationInteractionDelegate {
             }
             mapView.viewAnnotations.remove(currentAnnotationView)
         }
-    }
-}
-
-private extension CLLocationCoordinate2D {
-    static func >(lhs: Self, rhs: Self) -> Bool {
-        (lhs.latitude, lhs.longitude) > (rhs.latitude, rhs.longitude)
-    }
-    
-    static func >=(lhs: Self, rhs: Self) -> Bool {
-        (lhs.latitude, lhs.longitude) >= (rhs.latitude, rhs.longitude)
-    }
-    
-    static func <(lhs: Self, rhs: Self) -> Bool {
-        (lhs.latitude, lhs.longitude) < (rhs.latitude, rhs.longitude)
-    }
-    
-    static func <=(lhs: Self, rhs: Self) -> Bool {
-        (lhs.latitude, lhs.longitude) <= (rhs.latitude, rhs.longitude)
     }
 }

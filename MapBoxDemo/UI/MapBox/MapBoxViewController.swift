@@ -10,6 +10,7 @@ import MapboxCoreNavigation
 import MapboxNavigation
 import MapboxDirections
 import MapboxMaps
+import MapKit
 
 final class MapBoxViewController: UIViewController {
     let origin = CLLocationCoordinate2D(latitude: 10.7896748, longitude: 106.7006882)
@@ -33,13 +34,21 @@ final class MapBoxViewController: UIViewController {
         return button
     }()
     private lazy var navigationMapView: NavigationMapView = {
-        let mapView = NavigationMapView(frame: view.bounds)
-        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        mapView.delegate = self
+        let navigationMapView = NavigationMapView(frame: view.bounds)
+        navigationMapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        navigationMapView.delegate = self
         let mapLongGesture = UILongPressGestureRecognizer()
         mapLongGesture.addTarget(self, action: #selector(mapLongPress))
-        mapView.addGestureRecognizer(mapLongGesture)
-        return mapView
+//        mapView.addGestureRecognizer(mapLongGesture)
+        let mapPanGesture = UIPanGestureRecognizer()
+        mapPanGesture.addTarget(self, action:  #selector(mapPan))
+        navigationMapView.gestureRecognizers = [
+            mapLongGesture
+        ]
+//        navigationMapView.mapView.gestureRecognizers = [
+//            mapPanGesture
+//        ]
+        return navigationMapView
     }()
     private var markerId = 0
     
@@ -124,8 +133,18 @@ private extension MapBoxViewController {
     @objc func mapLongPress(_ sender: UILongPressGestureRecognizer) {
         guard sender.state == .ended else { return }
         let point = Point(navigationMapView.mapView.mapboxMap.coordinate(for: sender.location(in: navigationMapView)))
-        print(point)
         addMaker(at: point)
+    }
+    
+    @objc func mapPan(_ sender: UIPanGestureRecognizer) {
+        let point = Point(navigationMapView.mapView.mapboxMap.coordinate(for: sender.location(in: navigationMapView)))
+        guard sender.state == .ended else {
+            let coordinate = point.coordinates
+            navigationMapView.mapView.mapboxMap.setCamera(to: .init(center: .init(latitude: coordinate.latitude, longitude: coordinate.longitude)))
+            return
+        }
+//        addMaker(at: point)
+        print("\(point)")
     }
 }
 
